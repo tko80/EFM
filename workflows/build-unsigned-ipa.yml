@@ -1,0 +1,38 @@
+name: Build EFM unsigned IPA
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [ main ]
+
+jobs:
+  build:
+    runs-on: macos-15
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Build unsigned app
+        run: |
+          xcodebuild \
+            -project EFM.xcodeproj \
+            -scheme EFM \
+            -configuration Release \
+            -sdk iphoneos \
+            -derivedDataPath build/DerivedData \
+            CODE_SIGNING_ALLOWED=NO
+
+      - name: Package unsigned IPA
+        run: |
+          APP_PATH="build/DerivedData/Build/Products/Release-iphoneos/EFM.app"
+          test -d "$APP_PATH"
+          mkdir -p build/Payload
+          cp -R "$APP_PATH" build/Payload/
+          cd build
+          zip -r EFM-unsigned.ipa Payload
+
+      - name: Upload IPA
+        uses: actions/upload-artifact@v4
+        with:
+          name: EFM-unsigned-ipa
+          path: build/EFM-unsigned.ipa

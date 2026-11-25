@@ -1,0 +1,109 @@
+// !$*UTF8*$!
+{
+  archiveVersion = 1;
+  classes = {};
+  objectVersion = 56;
+  objects = {
+    A10000000000000000000001 /* Project object */ = {
+      isa = PBXProject;
+      attributes = { LastUpgradeCheck = 1600; };
+      buildConfigurationList = A10000000000000000000010;
+      compatibilityVersion = "Xcode 14.0";
+      developmentRegion = en;
+      hasScannedForEncodings = 0;
+      knownRegions = (en, Base);
+      mainGroup = A10000000000000000000002;
+      productRefGroup = A10000000000000000000003;
+      projectDirPath = "";
+      projectRoot = "";
+      targets = (A10000000000000000000020);
+    };
+    A10000000000000000000002 /* Main group */ = {
+      isa = PBXGroup;
+      children = (
+        A10000000000000000000004 /* EFM */,
+        A10000000000000000000003 /* Products */,
+      );
+      sourceTree = "<group>";
+    };
+    A10000000000000000000003 /* Products */ = {
+      isa = PBXGroup;
+      children = (A10000000000000000000030 /* EFM.app */);
+      name = Products;
+      sourceTree = "<group>";
+    };
+    A10000000000000000000004 /* EFM */ = {
+      isa = PBXGroup;
+      children = (
+        A10000000000000000000005 /* EFMApp.swift */,
+        A10000000000000000000006 /* EFMTheme.swift */,
+        A10000000000000000000007 /* ContentView.swift */,
+        A10000000000000000000008 /* ReminderManager.swift */,
+        A10000000000000000000009 /* Info.plist */,
+      );
+      path = EFM;
+      sourceTree = "<group>";
+    };
+    A10000000000000000000005 /* EFMApp.swift */ = { isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EFMApp.swift; sourceTree = "<group>"; };
+    A10000000000000000000006 /* EFMTheme.swift */ = { isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EFMTheme.swift; sourceTree = "<group>"; };
+    A10000000000000000000007 /* ContentView.swift */ = { isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+    A10000000000000000000008 /* ReminderManager.swift */ = { isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReminderManager.swift; sourceTree = "<group>"; };
+    A10000000000000000000009 /* Info.plist */ = { isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+    A10000000000000000000030 /* EFM.app */ = { isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EFM.app; sourceTree = BUILT_PRODUCTS_DIR; };
+    A10000000000000000000040 /* Sources */ = { isa = PBXSourcesBuildPhase; buildActionMask = 2147483647; files = (
+      A10000000000000000000041, A10000000000000000000042, A10000000000000000000043, A10000000000000000000044,
+    ); runOnlyForDeploymentPostprocessing = 0; };
+    A10000000000000000000041 = { isa = PBXBuildFile; fileRef = A10000000000000000000005; };
+    A10000000000000000000042 = { isa = PBXBuildFile; fileRef = A10000000000000000000006; };
+    A10000000000000000000043 = { isa = PBXBuildFile; fileRef = A10000000000000000000007; };
+    A10000000000000000000044 = { isa = PBXBuildFile; fileRef = A10000000000000000000008; };
+    A10000000000000000000050 /* Frameworks */ = { isa = PBXFrameworksBuildPhase; buildActionMask = 2147483647; files = (); runOnlyForDeploymentPostprocessing = 0; };
+    A10000000000000000000060 /* Resources */ = { isa = PBXResourcesBuildPhase; buildActionMask = 2147483647; files = (); runOnlyForDeploymentPostprocessing = 0; };
+    A10000000000000000000020 /* EFM target */ = {
+      isa = PBXNativeTarget;
+      buildConfigurationList = A10000000000000000000070;
+      buildPhases = (A10000000000000000000040, A10000000000000000000050, A10000000000000000000060);
+      buildRules = ();
+      dependencies = ();
+      name = EFM;
+      productName = EFM;
+      productReference = A10000000000000000000030;
+      productType = "com.apple.product-type.application";
+    };
+    A10000000000000000000010 = { isa = XCConfigurationList; buildConfigurations = (A10000000000000000000011, A10000000000000000000012); defaultConfigurationIsVisible = 0; defaultConfigurationName = Release; };
+    A10000000000000000000070 = { isa = XCConfigurationList; buildConfigurations = (A10000000000000000000071, A10000000000000000000072); defaultConfigurationIsVisible = 0; defaultConfigurationName = Release; };
+    A10000000000000000000011 = { isa = XCBuildConfiguration; buildSettings = { IPHONEOS_DEPLOYMENT_TARGET = 16.0; SDKROOT = iphoneos; }; name = Debug; };
+    A10000000000000000000012 = { isa = XCBuildConfiguration; buildSettings = { IPHONEOS_DEPLOYMENT_TARGET = 16.0; SDKROOT = iphoneos; }; name = Release; };
+    A10000000000000000000071 = {
+      isa = XCBuildConfiguration;
+      buildSettings = {
+        PRODUCT_BUNDLE_IDENTIFIER = com.tinwinko.efm;
+        PRODUCT_NAME = EFM;
+        SWIFT_VERSION = 5.0;
+        TARGETED_DEVICE_FAMILY = "1";
+        IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+        INFOPLIST_FILE = EFM/Info.plist;
+        GENERATE_INFOPLIST_FILE = NO;
+        CODE_SIGN_STYLE = Automatic;
+        SUPPORTS_MACCATALYST = NO;
+      };
+      name = Debug;
+    };
+    A10000000000000000000072 = {
+      isa = XCBuildConfiguration;
+      buildSettings = {
+        PRODUCT_BUNDLE_IDENTIFIER = com.tinwinko.efm;
+        PRODUCT_NAME = EFM;
+        SWIFT_VERSION = 5.0;
+        TARGETED_DEVICE_FAMILY = "1";
+        IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+        INFOPLIST_FILE = EFM/Info.plist;
+        GENERATE_INFOPLIST_FILE = NO;
+        CODE_SIGN_STYLE = Automatic;
+        SUPPORTS_MACCATALYST = NO;
+      };
+      name = Release;
+    };
+  };
+  rootObject = A10000000000000000000001;
+}
